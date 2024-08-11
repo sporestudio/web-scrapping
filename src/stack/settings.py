@@ -94,9 +94,13 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 ## Database settings
 
-ITEM_PIPELINES = ['stack.pipelines.MongoDBPipeline', ]
+ITEM_PIPELINES = {'stack.pipelines.MongoDBPipeline': 300,}
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
 MONGODB_DB = "stackoverflow"
 MONGODB_COLLECTION = "questions"
+
+
+# Delay
+DOWNLOAD_DELAY = 5
